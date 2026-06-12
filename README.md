@@ -38,3 +38,17 @@ Smallest deployable unit in Kubernetes.
 ```bash
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+
+## Verify Deployment
+```bash
+kubectl get pods
+kubectl get services
+
+## Scaling
+```bash
+kubectl scale deployment user-service --replicas=4
+
+## Rolling Update
+```bash id="r1"
+kubectl set image deployment/user-service user-service=user-service:v2
+kubectl rollout status deployment/user-service
