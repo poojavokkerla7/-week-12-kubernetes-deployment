@@ -27,15 +27,14 @@ Exposes application to network using NodePort.
 Smallest deployable unit in Kubernetes.
 
 ## Files
-
 - deployment.yaml → Kubernetes deployment configuration
 - service.yaml → Service configuration
 - documentation/ → Deployment steps and guide
+
+---
 
 ## Deployment Steps
 
 ```bash
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
-kubectl get pods
-kubectl get services
